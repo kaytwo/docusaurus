@@ -12,6 +12,7 @@ export function toGlobalDataDoc(doc: DocMetadata): GlobalDoc {
     id: doc.unversionedId,
     path: doc.permalink,
     sidebar: doc.sidebar,
+    frontMatter: doc.frontMatter,
   };
 }
 
