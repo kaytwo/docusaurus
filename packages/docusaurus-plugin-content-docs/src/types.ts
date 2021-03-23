@@ -53,6 +53,7 @@ export type MetadataOptions = {
   editLocalizedFiles: boolean;
   showLastUpdateTime?: boolean;
   showLastUpdateAuthor?: boolean;
+  includeFrontMatterInGlobals?: boolean;
 };
 
 export type PathOptions = {
