@@ -300,6 +300,10 @@ describe('simple site', () => {
       slug: '/lorem',
       title: 'lorem',
       editUrl: 'https://github.com/customUrl/docs/lorem.md',
+      frontMatter: {
+        custom_edit_url: 'https://github.com/customUrl/docs/lorem.md',
+        unrelated_frontmatter: "won't be part of metadata",
+      },
       description: 'Lorem ipsum.',
     });
   });
