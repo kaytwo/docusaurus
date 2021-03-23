@@ -130,6 +130,11 @@ export type LastUpdateData = {
   lastUpdatedBy?: string;
 };
 
+export type FrontMatter = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
 export type DocMetadataBase = LastUpdateData & {
   version: VersionName;
   unversionedId: string;
@@ -143,7 +148,7 @@ export type DocMetadataBase = LastUpdateData & {
   // eslint-disable-next-line camelcase
   sidebar_label?: string;
   editUrl?: string | null;
-  frontMatter?: object;
+  frontMatter?: FrontMatter;
 };
 
 export type DocNavLink = {
@@ -176,7 +181,7 @@ export type GlobalDoc = {
   id: string;
   path: string;
   sidebar: string | undefined;
-  frontMatter?: object;
+  frontMatter?: FrontMatter;
 };
 
 export type GlobalVersion = {
