@@ -286,6 +286,24 @@ describe('simple site', () => {
     });
   });
 
+  test('docs with custom editUrl & including unrelated frontmatter in globals', async () => {
+    const {defaultTestUtils} = await loadSite({
+      options: {includeFrontMatterInGlobals: true},
+    });
+
+    await defaultTestUtils.testMeta('lorem.md', {
+      version: 'current',
+      id: 'lorem',
+      unversionedId: 'lorem',
+      isDocsHomePage: false,
+      permalink: '/docs/lorem',
+      slug: '/lorem',
+      title: 'lorem',
+      editUrl: 'https://github.com/customUrl/docs/lorem.md',
+      description: 'Lorem ipsum.',
+    });
+  });
+
   test('docs with function editUrl', async () => {
     const hardcodedEditUrl = 'hardcoded-edit-url';
 
